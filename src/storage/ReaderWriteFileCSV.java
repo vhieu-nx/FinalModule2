@@ -8,9 +8,9 @@ import java.util.ArrayList;
 public class ReaderWriteFileCSV {
     private static final String COMMA_DELIMITER = ",";
     private static final String NEW_LINE_SEPARATOR ="\n" ;
-
+    public static final String FILE_PATH = "data/contacts.csv";
+    File file = new File(FILE_PATH);
     public void writeFile(ArrayList<Contact> arrayList){
-        File file = new File("data/contacts.csv");
         try {
             FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -44,7 +44,7 @@ public class ReaderWriteFileCSV {
     public ArrayList<Contact> readFile(){
         ArrayList<Contact> contacts = new ArrayList<Contact>();
         try {
-            FileReader fileReader = new FileReader("data/contacts.csv");
+            FileReader fileReader = new FileReader(FILE_PATH);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line = null;
             while ((line = bufferedReader.readLine()) != null){
