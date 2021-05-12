@@ -46,7 +46,7 @@ public class MainMenu {
 //                    readerWriteFileCSV.writeFile(contacts);
 //                    break;
                 case 7:
-                    readerWriteFileCSV.readFile();
+                    contacts = readerWriteFileCSV.readFile();
                     System.out.println(contacts);
                     break;
                 case 8:
