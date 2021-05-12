@@ -9,7 +9,7 @@ public class DisplayMenu {
         System.out.println("3.Update");
         System.out.println("4.Delete");
         System.out.println("5.Search");
-        System.out.println("6.Write file");
+//        System.out.println("6.Write file");
         System.out.println("7.Read file");
         System.out.println("8.Exit");
     }

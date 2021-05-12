@@ -42,9 +42,9 @@ public class MainMenu {
                 case 5:
                     contactManager.searchContactByNameorPhone(contacts);
                     break;
-                case 6:
-                    readerWriteFileCSV.writeFile(contacts);
-                    break;
+//                case 6:
+//                    readerWriteFileCSV.writeFile(contacts);
+//                    break;
                 case 7:
                     readerWriteFileCSV.readFile();
                     System.out.println(contacts);
