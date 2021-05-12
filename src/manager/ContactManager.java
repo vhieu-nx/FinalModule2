@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ContactManager {
-    ReaderWriteFileCSV readerWriteFileCSV = new ReaderWriteFileCSV();
+
     public  void addContact(ArrayList<Contact> arrayList){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Contact FullName: ");
@@ -40,7 +40,7 @@ public class ContactManager {
         if (result.equals("AddNew Susscessfully")){
             Contact contact = new Contact(fullname,phoneNumber,group,gender,address,email,dateOfBirth);
             arrayList.add(contact);
-            readerWriteFileCSV.writeFile(arrayList);
+
         }else {
             System.out.println(result);
             this.addContact(arrayList);
@@ -93,7 +93,6 @@ public class ContactManager {
                 System.out.println("Update successfully");
                 Contact contact = new Contact(fullName, phoneNumber, group, gender, address, mail, dateOfBirth);
                 arrayList.set(index,contact);
-                readerWriteFileCSV.writeFile(arrayList);
 
             }else {
                 System.out.println(result);
@@ -130,7 +129,7 @@ public class ContactManager {
             if (yes.equals("Y")){
                 int index = checkPhone(phone, arrayList);
                 arrayList.remove(index);
-                readerWriteFileCSV.writeFile(arrayList);
+
                 System.out.println("Delete susscessfully");
 
             }else {
